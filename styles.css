@@ -1,0 +1,174 @@
+/* 기본 리셋 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 기본 바디 스타일 */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* 헤더 스타일 */
+header {
+  background-image: url('배경.png'); /* 배경 이미지 추가 */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* 모임 정보, 참석 여부 확인, 갤러리, 위치 안내 스타일 */
+.details, .rsvp, .gallery, .map {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ff6f61; /* 트렌디한 색상 */
+}
+
+/* 버튼 스타일 */
+.btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4f42;
+}
+
+/* 이미지 갤러리 스타일 */
+.images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* 모바일에서는 이미지가 줄 바꿈 되도록 설정 */
+}
+
+.images img {
+  width: 100%; /* 이미지의 너비를 부모 컨테이너의 100%로 설정 */
+  max-width: 400px; /* 이미지의 최대 너비를 설정 */
+  height: auto; /* 높이는 자동으로 조정 */
+  object-fit: cover; /* 비율을 유지하며 이미지를 크롭하여 표시 */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #ff6f61;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+/* 달력 스타일 */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.calendar-header {
+  font-weight: bold;
+  background-color: #ff6f61;
+  color: white;
+  padding: 10px;
+}
+
+.calendar-day {
+  padding: 15px;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.calendar-day:hover {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.selected {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* 반응형 디자인 (모바일) */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 36px;
+  }
+
+  .details, .rsvp, .gallery, .map {
+      padding: 20px;
+  }
+
+  .container {
+      padding: 0 10px;
+  }
+
+  .images {
+      flex-direction: column;
+  }
+
+  .images img {
+      width: 100%; /* 화면 너비에 맞게 이미지 너비를 100%로 설정 */
+      max-width: 100%; /* 최대 너비를 100%로 설정 */
+  }
+}
+
+/* 더 작은 화면에서 이미지 크기 조정 */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 28px;
+  }
+}
