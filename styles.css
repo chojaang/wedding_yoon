@@ -123,15 +123,6 @@ footer p {
   padding: 10px;
 }
 
-/* 지도 스타일 추가 */
-.map iframe {
-  width: 100%;
-  max-width: 100%;
-  height: auto; /* 비율에 맞게 높이 조정 */
-  border: 0;
-  border-radius: 10px;
-}
-
 .calendar-day {
   padding: 15px;
   font-size: 18px;
