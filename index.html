@@ -14,6 +14,7 @@
             <p>윤규와 은정이의</p>
             <P>특별한 순간을 함께해 주세요💕</P>
         </div>
+            <div class="countdown" id="countdown"></div>
     </header>
 
     <section class="details">
@@ -60,10 +61,36 @@
         </div>
     </section>
 
+    <section class="message">
+        <div class="container message-box">
+            <h2>마음 전할 곳 💌</h2>
+            <p>축하의 마음을 전하고 싶은 분들은 아래 계좌로 마음을 보내주실 수 있습니다.</p>
+            <div class="account-box">
+                <p> 농협은행 815137-52-007221 최주환 <button class="copy-btn" onclick="copyToClipboard('815137-52-007221')">📋 복사</button></p>
+            </div>
+            <div class="account-box">
+                <p> 농협은행 815073-56-161680 김두리 <button class="copy-btn" onclick="copyToClipboard('815073-56-161680')">📋 복사</button></p>
+            </div>
+            <p class="thank-you">소중한 마음 감사합니다. 💕</p>
+        </div>
+    </section>
+
     <footer>
         <p>많은 참석 부탁드립니다! 💕</p>
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('계좌 번호가 복사되었습니다!');
+        }
+        </script>
 </body>
 </html>
