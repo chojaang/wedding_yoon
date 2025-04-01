@@ -1,4 +1,18 @@
 // 달력을 생성하고 모임 날짜(2025-05-04)를 노란색으로 표시하는 JavaScript 코드
+function updateCountdown() {
+    const weddingDate = new Date("2025-05-04T00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = weddingDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+    document.getElementById("countdown").innerText = `D-${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+}
+setInterval(updateCountdown, 1000);
+
 
 function generateCalendar(year, month) {
   const calendar = document.getElementById('calendar');
